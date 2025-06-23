@@ -2,27 +2,38 @@
 
 AI-powered chat plugin for Vim using OpenAI.
 
-## Installation
+## Installation (with Makefile)
 
-1. Copy the `plugin/vim-pilot.vim` and `python/vim_pilot.py` files to your Vim runtime path:
-   - `plugin/vim-pilot.vim` → `~/.vim/plugin/vim-pilot.vim`
-   - `python/vim_pilot.py` → `~/.vim/vim-pilot/python/vim_pilot.py`
-
-2. Install the Python dependencies:
+1. Run the following command in the project directory:
 
 ```sh
-pip install openai
+make
 ```
 
-## Configuration
+This will:
+- Install the required Python dependencies (`openai`)
+- Copy the plugin files to your Vim runtime path
+- Print configuration instructions for your `.vimrc`
 
-Set your OpenAI API key in your `.vimrc` or as an environment variable:
+2. Add your OpenAI API key to your `.vimrc` as instructed:
 
 ```vim
 let g:vim_pilot_openai_api_key = 'sk-...'
 ```
 
 Or set the `OPENAI_API_KEY` environment variable.
+
+## Manual Installation
+
+If you prefer manual setup, copy the files as follows:
+- `plugin/vim-pilot.vim` → `~/.vim/plugin/vim-pilot.vim`
+- `python/vim_pilot.py` → `~/.vim/vim-pilot/python/vim_pilot.py`
+
+And install the Python dependency:
+
+```sh
+pip install openai
+```
 
 ## Usage
 
